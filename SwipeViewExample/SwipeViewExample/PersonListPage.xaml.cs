@@ -25,6 +25,7 @@ namespace SwipeViewExample
 
         private async void Button_Clicked(object sender, EventArgs e)
         {
+            List.Clear();
             var result = await provider.GetPersons();
             foreach(var item in result.results)
             {
