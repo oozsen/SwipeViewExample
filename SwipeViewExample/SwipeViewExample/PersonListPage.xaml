@@ -16,7 +16,9 @@
                                 <SwipeView.LeftItems>
                                     <SwipeItems>
                                         <SwipeItem Text="Delete"
-                                                   BackgroundColor="Red"/>
+                                                   BackgroundColor="Red"
+                                                   Invoked="SwipeItem_Invoked"
+                                                   CommandParameter="{Binding .}"/>
                                     </SwipeItems>
                                 </SwipeView.LeftItems>
                                 <Grid>

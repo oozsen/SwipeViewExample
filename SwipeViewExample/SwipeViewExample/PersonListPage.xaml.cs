@@ -31,5 +31,12 @@ namespace SwipeViewExample
                 List.Add(item);
             }
         }
+
+        private void SwipeItem_Invoked(object sender, EventArgs e)
+        {
+            var item = (SwipeItem)sender;
+            var parameter = (Result)item.CommandParameter;
+            List.Remove(parameter);
+        }
     }
 }
