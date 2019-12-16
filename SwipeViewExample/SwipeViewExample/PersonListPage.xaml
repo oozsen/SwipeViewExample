@@ -12,12 +12,21 @@
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <Grid>
+                            <SwipeView>
+                                <SwipeView.LeftItems>
+                                    <SwipeItems>
+                                        <SwipeItem Text="Delete"
+                                                   BackgroundColor="Red"/>
+                                    </SwipeItems>
+                                </SwipeView.LeftItems>
+                                <Grid>
                                 <Grid.RowDefinitions>
-                                    
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
                                 </Grid.RowDefinitions>
                                 <Grid.ColumnDefinitions>
-                                    
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
                                 </Grid.ColumnDefinitions>
                                 <Image Source="{Binding picture.large}" 
                                        Aspect="AspectFill"
@@ -27,10 +36,11 @@
                                 <Label Text="{Binding name.first}"
                                        Grid.Row="0"
                                        Grid.Column="1" FontAttributes="Bold"/>
-                                <Label Text="{Binding name.first}"
+                                <Label Text="{Binding name.last}"
                                        Grid.Row="1"
                                        Grid.Column="1" FontAttributes="Italic"/>
                             </Grid>
+                            </SwipeView>
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>

@@ -14,7 +14,7 @@ namespace SwipeViewExample.ServiceManager
         {
             var client = new HttpClient();
 
-            return JsonConvert.DeserializeObject<Person>(await client.GetStringAsync("https://randomuser.me/api/?results=30")); 
+            return JsonConvert.DeserializeObject<Person>(await client.GetStringAsync("https://randomuser.me/api/?results=20")); 
         }
     }
 }
